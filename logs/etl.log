@@ -1,0 +1,81 @@
+2026-04-23 13:59:35,918 | INFO |  ETL Pipeline started
+2026-04-23 13:59:35,965 | INFO | Data loaded successfully
+2026-04-23 13:59:35,967 | INFO | Rows: 6435
+2026-04-23 13:59:35,968 | INFO | Columns: 8
+2026-04-23 13:59:35,997 | INFO | Column cleaning + duplicate removal done
+2026-04-23 13:59:35,998 | ERROR | Transform failed: name 'pd' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Tiishetso Mogoboya\Desktop\weather analytics app\etl\transform.py", line 16, in transform_data
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
+                 ^^
+NameError: name 'pd' is not defined. Did you mean: 'id'?
+2026-04-23 13:59:36,291 | INFO | MySQL engine created successfully
+2026-04-23 13:59:37,173 | INFO | Data loaded into table: walmart_sales
+2026-04-23 13:59:37,174 | INFO |  ETL Pipeline completed successfully
+2026-04-23 14:04:18,501 | INFO |  ETL Pipeline started
+2026-04-23 14:04:18,527 | INFO | Data loaded successfully
+2026-04-23 14:04:18,527 | INFO | Rows: 6435
+2026-04-23 14:04:18,527 | INFO | Columns: 8
+2026-04-23 14:04:18,542 | INFO | Column cleaning + duplicate removal done
+2026-04-23 14:04:18,557 | INFO | Date transformation completed
+2026-04-23 14:04:18,703 | INFO | MySQL engine created successfully
+2026-04-23 14:04:19,164 | INFO | Data loaded into table: walmart_sales
+2026-04-23 14:04:19,164 | INFO |  ETL Pipeline completed successfully
+2026-04-23 14:53:00,336 | INFO | Data loaded successfully
+2026-04-23 14:53:00,337 | INFO | Rows: 6435
+2026-04-23 14:53:00,338 | INFO | Columns: 8
+2026-04-23 14:53:00,344 | INFO | Column cleaning + duplicate removal done
+2026-04-23 14:53:00,350 | INFO | Date transformation completed
+2026-04-23 14:53:00,493 | INFO | MySQL engine created successfully
+2026-04-23 14:53:01,068 | INFO | Data loaded into table: walmart_sales
+2026-04-23 14:57:06,665 | INFO | Data loaded successfully
+2026-04-23 14:57:06,665 | INFO | Rows: 6435
+2026-04-23 14:57:06,665 | INFO | Columns: 8
+2026-04-23 14:57:06,670 | INFO | Column cleaning + duplicate removal done
+2026-04-23 14:57:06,674 | INFO | Date transformation completed
+2026-04-23 14:57:06,764 | INFO | MySQL engine created successfully
+2026-04-23 14:57:07,261 | INFO | Data loaded into table: walmart_sales
+2026-04-23 15:00:22,055 | INFO | Data loaded successfully
+2026-04-23 15:00:22,055 | INFO | Rows: 6435
+2026-04-23 15:00:22,055 | INFO | Columns: 8
+2026-04-23 15:00:22,179 | INFO | MySQL engine created successfully
+2026-04-23 15:00:22,797 | INFO | Data loaded into table: walmart_sales
+2026-04-23 15:03:25,220 | INFO | Data loaded successfully
+2026-04-23 15:03:25,221 | INFO | Rows: 6435
+2026-04-23 15:03:25,221 | INFO | Columns: 8
+2026-04-23 15:03:25,329 | INFO | MySQL engine created successfully
+2026-04-23 15:03:25,874 | INFO | Data loaded into table: walmart_sales
+2026-04-23 16:49:16,947 | INFO | Data loaded successfully
+2026-04-23 16:49:16,948 | INFO | Rows: 6435
+2026-04-23 16:49:16,949 | INFO | Columns: 8
+2026-04-23 16:49:17,266 | INFO | MySQL engine created successfully
+2026-04-23 16:49:18,121 | INFO | Data loaded into table: walmart_sales
+2026-04-23 16:56:16,834 | INFO | Data loaded successfully
+2026-04-23 16:56:16,834 | INFO | Rows: 6435
+2026-04-23 16:56:16,835 | INFO | Columns: 8
+2026-04-23 16:56:16,958 | INFO | MySQL engine created successfully
+2026-04-23 16:56:17,609 | INFO | Data loaded into table: walmart_sales
+2026-04-23 17:13:24,184 | INFO | MySQL engine created successfully
+2026-04-23 17:13:29,322 | INFO | MySQL engine created successfully
+2026-04-23 17:13:36,202 | INFO | MySQL engine created successfully
+2026-04-23 17:13:36,203 | INFO | MySQL engine created successfully
+2026-04-23 17:14:31,305 | ERROR | Failed to fetch holiday sales: Not an executable object: 'SELECT * FROM holiday_sales'
+Traceback (most recent call last):
+  File "C:\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1415, in execute
+    meth = statement._execute_on_connection
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute '_execute_on_connection'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Tiishetso Mogoboya\Desktop\weather analytics app\api\main.py", line 26, in get_holiday_sales
+    result = conn.execute("SELECT * FROM holiday_sales").fetchall()
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\site-packages\sqlalchemy\engine\base.py", line 1417, in execute
+    raise exc.ObjectNotExecutableError(statement) from err
+sqlalchemy.exc.ObjectNotExecutableError: Not an executable object: 'SELECT * FROM holiday_sales'
+2026-04-23 17:20:46,458 | INFO | MySQL engine created successfully
+2026-04-23 17:21:21,990 | INFO | Holiday sales data retrieved successfully
+2026-04-23 17:25:48,071 | INFO | Monthly sales data retrieved successfully
+2026-04-23 17:26:50,915 | INFO | Store performance data retrieved successfully
