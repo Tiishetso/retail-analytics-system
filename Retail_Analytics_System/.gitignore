@@ -1,8 +1,12 @@
 
-# Env
 .env
 .env.*
+.env
+__pycache__/
+*.pyc
+
 # Logs
+logs/
 logs
 *.log
 npm-debug.log*
@@ -26,3 +30,4 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
